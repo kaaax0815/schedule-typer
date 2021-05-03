@@ -14,16 +14,21 @@ Exports to JSON
 Type Bus Schedules easier
 
 Options:
-  -V, --version  output the version number
-  -A, --about    About
-  -S, --start    Start the Input
-  -h, --help     display help for command
+  -V, --version                 output the version number  
+  -A, --about                   About  
+  -S, --start [bushaltestelle]  Start the Input  
+  -h, --help                    display help for command  
+
+arguments inside [] are optional
 
 ## How to
 
 Bushaltestelle: `enter the bus stop`  
-Number: `enter the time (HH:MM)`  
+Number: `enter the time (HH,MM)`  
 Shortcuts: N = `NULL`  
-Allowed Characters other than (HH:MM): `N, |, X`  
+Allowed Characters other than (HH,MM): `N, |, X`  
 Save: `X`  
 Location: `dist/answers.json`  
+
+All Keys are Case **INSENSITIVE**
+For easier numpad HH,MM gets translated to HH:MM

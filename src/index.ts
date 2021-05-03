@@ -9,14 +9,14 @@ program
   .version(config.version)
   .description('Type Bus Schedules easier')
   .option('-A, --about', 'About')
-  .option('-S, --start', 'Start the Input')
+  .option('-S, --start [bushaltestelle]', 'Start the Input')
   .parse(process.argv);
 
 const options: Options = program.opts();
 
 if (options.about) About();
 
-if (options.start) Main();
+if (options.start) Main(options.start);
 
 if (!process.argv.slice(2).length) {
   program.outputHelp();
