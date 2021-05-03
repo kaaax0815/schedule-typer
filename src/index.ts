@@ -8,13 +8,14 @@ program
   .description('Type Bus Schedules easier')
   .option('-A, --about', 'About')
   .option('-S, --start [bushaltestelle]', 'Start the Input')
+  .option('-F, --file <filename>', 'Specific Output', 'dist/answers.json')
   .parse(process.argv);
 
 const options: Options = program.opts();
 
 if (options.about) About();
 
-if (options.start) Prompt(options.start);
+if (options.start) Prompt(options.start, options.file);
 
 if (!process.argv.slice(2).length) {
   program.outputHelp();
@@ -22,5 +23,5 @@ if (!process.argv.slice(2).length) {
 
 interface Options extends program.OptionValues {
   about?: boolean;
-  start?: boolean;
+  start?: boolean | string;
 }

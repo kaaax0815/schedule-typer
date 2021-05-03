@@ -6,11 +6,13 @@ import saveString from './utils/save';
 
 let _count = 0;
 let _bushaltestelle: string;
+let _filename: string;
 const _answers: Array<string> = [];
 
 // Gets Bushaltestelle and Starts Loop
-async function Prompt(bushaltestelle: string | boolean) {
+async function Prompt(bushaltestelle: string | boolean, filename: string) {
   clear();
+  _filename = filename;
   // if argument is boolean ask for bushaltestelle otherwise get it from argument
   if (typeof bushaltestelle === 'boolean') {
     const bushaltestelleprompt: prompts.PromptObject = {
@@ -68,7 +70,7 @@ function saveAnswers() {
     bushaltestelle: bushaltestelle,
     zeiten: answers
   };
-  saveString('answers.json', JSON.stringify(result));
+  saveString(_filename, JSON.stringify(result));
 }
 
 function validateBushaltestelle(input: string) {

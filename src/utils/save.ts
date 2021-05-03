@@ -6,10 +6,13 @@ import path from 'path';
 import config from '../config';
 
 function saveString(filename: string, data: string) {
-  fs.writeFile(path.join(config.output, filename), data, (err) => {
+  const currentPath = config.currentPath;
+  const fileLoc = path.join(currentPath, filename);
+  const fileFolder = path.join(currentPath, filename.substring(0, filename.lastIndexOf('/')));
+  fs.writeFile(fileLoc, data, (err) => {
     if (err) {
       if (err?.code === 'ENOENT') {
-        mkdirp(config.output);
+        mkdirp(fileFolder);
         saveString(filename, data);
       } else if (err) {
         throw new Error(err.message);
@@ -17,7 +20,7 @@ function saveString(filename: string, data: string) {
     } else {
       console.log(
         `${chalk.green('√')} ${chalk.bold('Saved to:')} ${chalk.grey('...')} ${path.join(
-          config.output,
+          config.currentPath,
           filename
         )}`
       );
