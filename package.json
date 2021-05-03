@@ -14,8 +14,8 @@
   },
   "scripts": {
     "build": "tsc -p .",
-    "install": "npm i -g",
-    "local": "npm run build && npm run install && npm run test",
+    "globalinstall": "npm i -g",
+    "local": "npm run build && npm run globalinstall && npm run test",
     "test": "schedule-typer -S",
     "lint": "eslint . --ignore-path ./.gitignore",
     "lint:fix": "eslint . --ignore-path ./.gitignore --fix"
