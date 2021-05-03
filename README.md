@@ -13,10 +13,10 @@ Exports to JSON
 
 Type Bus Schedules easier
 
-Options:
-  -V, --version                 output the version number  
+Options:  
   -A, --about                   About  
   -S, --start [bushaltestelle]  Start the Input  
+  -F, --file \<filename\>         Specific Output (default: "dist/answers.json")  
   -h, --help                    display help for command  
 
 arguments inside [] are optional
@@ -25,10 +25,19 @@ arguments inside [] are optional
 
 Bushaltestelle: `enter the bus stop`  
 Number: `enter the time (HH,MM)`  
+
+## Infos
+
 Shortcuts: N = `NULL`  
 Allowed Characters other than (HH,MM): `N, |, X`  
 Save: `X`  
-Location: `dist/answers.json`  
+Default: `dist/answers.json`  
 
-All Keys are Case **INSENSITIVE**
-For easier numpad HH,MM gets translated to HH:MM
+All Keys are Case **INSENSITIVE**  
+For easier numpad usage, HH,MM gets translated to HH:MM
+
+## Argument examples
+
+```schedule-typer -S Berlin -F lol/result.json```  
+short for:  
+```schedule-typer --start Berlin --file lol/result.json```
