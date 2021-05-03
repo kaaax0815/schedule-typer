@@ -50,8 +50,6 @@ async function Submit() {
 function saveAnswers() {
   const bushaltestelle: string = _bushaltestelle.bushaltestelle;
   const answers = _answers;
-  console.log(`Bushaltestelle: ${bushaltestelle}`);
-  console.log(`Answers: ${answers}`);
   const result = {
     bushaltestelle: bushaltestelle,
     zeiten: answers

@@ -1,3 +1,4 @@
+import chalk from 'chalk';
 import fs from 'fs';
 import mkdirp from 'mkdirp';
 import path from 'path';
@@ -12,9 +13,14 @@ function saveString(filename: string, data: string) {
         saveString(filename, data);
       } else if (err) {
         throw new Error(err.message);
-      } else {
-        return true;
       }
+    } else {
+      console.log(
+        `${chalk.green('√')} ${chalk.bold('Saved to:')} ${chalk.grey('...')} ${path.join(
+          config.output,
+          filename
+        )}`
+      );
     }
   });
 }
