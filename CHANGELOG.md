@@ -1,3 +1,7 @@
+## [v1.3.1] - 2021-05-03
+
+[Release notes](https://github.com/kaaax0815/schedule-typer/releases/tag/v1.3.1) · [Compare](https://github.com/kaaax0815/schedule-typer/compare/v1.3.0...v1.3.1) · [Tag](https://github.com/kaaax0815/schedule-typer/tree/v1.3.1) · Archive ([zip](https://github.com/kaaax0815/schedule-typer/archive/v1.3.1.zip) · [tar.gz](https://github.com/kaaax0815/schedule-typer/archive/v1.3.1.tar.gz))
+
 ## [v1.3.0] - 2021-05-03
 
 [Release notes](https://github.com/kaaax0815/schedule-typer/releases/tag/v1.3.0) · [Compare](https://github.com/kaaax0815/schedule-typer/compare/v1.2.0...v1.3.0) · [Tag](https://github.com/kaaax0815/schedule-typer/tree/v1.3.0) · Archive ([zip](https://github.com/kaaax0815/schedule-typer/archive/v1.3.0.zip) · [tar.gz](https://github.com/kaaax0815/schedule-typer/archive/v1.3.0.tar.gz))
