@@ -4,13 +4,13 @@
   "license": "GPL-3.0",
   "author": "Bernd Storath <bernd@kaaaxcreators>",
   "version": "1.1.0",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "lib"
+    "dist"
   ],
   "bin": {
-    "schedule-typer": "lib/index.js"
+    "schedule-typer": "dist/index.js"
   },
   "scripts": {
     "build": "tsc -p .",

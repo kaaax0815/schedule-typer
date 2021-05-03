@@ -2,11 +2,9 @@
 import program from 'commander';
 
 import About from './about';
-import config from './config';
-import Main from './prompt';
+import Prompt from './prompt';
 
 program
-  .version(config.version)
   .description('Type Bus Schedules easier')
   .option('-A, --about', 'About')
   .option('-S, --start [bushaltestelle]', 'Start the Input')
@@ -16,7 +14,7 @@ const options: Options = program.opts();
 
 if (options.about) About();
 
-if (options.start) Main(options.start);
+if (options.start) Prompt(options.start);
 
 if (!process.argv.slice(2).length) {
   program.outputHelp();

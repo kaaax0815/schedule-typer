@@ -8,6 +8,6 @@ export default function About() {
   clear();
   const kaaaxcreators = figlet.textSync('kaaaxcreators');
   console.log(chalk.bgBlue.black(kaaaxcreators));
-  console.log(`--- ${config.name}:${config.version} ---`);
+  console.log(`--- ${config.name} ---`);
   console.log('Author: Bernd Storath <bernd@kaaaxcreators.de>');
 }
