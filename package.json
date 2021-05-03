@@ -4,21 +4,22 @@
   "license": "GPL-3.0",
   "author": "Bernd Storath <bernd@kaaaxcreators>",
   "version": "1.0.0",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib"
   ],
   "bin": {
-    "schedule-typer": "./lib/index.js"
+    "schedule-typer": "lib/index.js"
   },
   "scripts": {
     "build": "tsc -p .",
     "globalinstall": "npm i -g",
-    "local": "npm run build && npm run globalinstall && npm run test",
+    "local": "npm run uninstall && npm run build && npm run globalinstall && npm run test",
     "test": "schedule-typer -S",
     "lint": "eslint . --ignore-path ./.gitignore",
-    "lint:fix": "eslint . --ignore-path ./.gitignore --fix"
+    "lint:fix": "eslint . --ignore-path ./.gitignore --fix",
+    "uninstall": "npm remove -g"
   },
   "dependencies": {
     "chalk": "^4.1.0",
