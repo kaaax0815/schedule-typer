@@ -3,7 +3,7 @@
   "description": "",
   "license": "GPL-3.0",
   "author": "Bernd Storath <bernd@kaaaxcreators.de>",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
