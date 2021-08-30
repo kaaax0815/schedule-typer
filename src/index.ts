@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import program from 'commander';
+import { OptionValues, program } from 'commander';
 
 import About from './about';
 import Prompt from './prompt';
@@ -21,7 +21,7 @@ if (!process.argv.slice(2).length) {
   program.outputHelp();
 }
 
-interface Options extends program.OptionValues {
+interface Options extends OptionValues {
   about?: boolean;
   start?: boolean | string;
 }
