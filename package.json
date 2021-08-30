@@ -27,7 +27,7 @@
     "commander": "^8.1.0",
     "figlet": "^1.5.2",
     "mkdirp": "^1.0.4",
-    "ora": "5.4.0",
+    "ora": "6.0.0",
     "prompts": "^2.4.1"
   },
   "devDependencies": {
